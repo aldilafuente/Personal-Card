@@ -1,0 +1,69 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: peachpuff;
+}
+
+@mixin border-radius {
+    -webkit-border-radius: 230px;
+    -moz-border-radius: 230px;
+    border-radius: 230px;
+    // border: 1px solid white;
+}
+
+@mixin centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex ($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+.contenedor {
+    border: 4px double black;
+    @include flex(row, center, center);
+    margin: auto;
+    width: 70%;
+    height: 450px;
+    margin-top: 100px;
+}
+
+.avatar {
+    background: lightgreen;
+    @include border-radius();
+    @include centrar();
+    width: 230px;
+    height: 230px;
+    
+    img {
+        width: 100%;
+        height: 230px;
+        @include border-radius();
+    }
+}
+
+.descripcion {
+    @include centrar();
+    flex-direction: row;
+    width: 60%;
+    margin-left: 60px;
+    
+    article {
+        margin: 25px;
+    }
+}
+
+.fotitos {
+    @include flex(row, space-evenly, center);
+    
+    .cajas {
+        width: 80px;
+        height: 80px;
+        background: white;
+    }
+}
