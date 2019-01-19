@@ -33,7 +33,7 @@ html, body {
   width: 230px;
   height: 230px;
 }
-/* line 55, ../sass/estilo.scss */
+/* line 54, ../sass/estilo.scss */
 .avatar img {
   width: 100%;
   height: 230px;
@@ -42,7 +42,7 @@ html, body {
   border-radius: 230px;
 }
 
-/* line 62, ../sass/estilo.scss */
+/* line 61, ../sass/estilo.scss */
 .descripcion {
   display: flex;
   flex-direction: column;
@@ -52,20 +52,20 @@ html, body {
   margin-left: 70px;
   font-family: 'Monda', sans-serif;
 }
-/* line 68, ../sass/estilo.scss */
+/* line 67, ../sass/estilo.scss */
 .descripcion .parrafos {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/* line 72, ../sass/estilo.scss */
+/* line 71, ../sass/estilo.scss */
 .descripcion p {
   margin: 0px 15px 0px 15px;
   text-align: center;
   font-size: 13px;
 }
 
-/* line 79, ../sass/estilo.scss */
+/* line 78, ../sass/estilo.scss */
 .imagenes {
   display: flex;
   flex-direction: row;
@@ -74,24 +74,87 @@ html, body {
   width: 60%;
   margin-top: 30px;
 }
-/* line 84, ../sass/estilo.scss */
+/* line 83, ../sass/estilo.scss */
 .imagenes .fotos {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-/* line 88, ../sass/estilo.scss */
+/* line 87, ../sass/estilo.scss */
 .imagenes .centro {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/* line 92, ../sass/estilo.scss */
+/* line 91, ../sass/estilo.scss */
 .imagenes .pic {
   border: 2px ridge black;
   background: white;
   width: 95px;
   height: 95px;
   margin: 10px;
+}
+
+/* RESPONSIVE PARA CELULARES */
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+  /* line 104, ../sass/estilo.scss */
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+  }
+  /* line 108, ../sass/estilo.scss */
+  .contenedor .avatar {
+    margin-bottom: 30px;
+  }
+  /* line 111, ../sass/estilo.scss */
+  .contenedor .avatar img {
+    width: 80%;
+    height: 100%;
+  }
+  /* line 117, ../sass/estilo.scss */
+  .contenedor .descripcion {
+    width: 100%;
+    margin: 0;
+  }
+  /* line 121, ../sass/estilo.scss */
+  .contenedor .descripcion .parrafos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+  /* line 125, ../sass/estilo.scss */
+  .contenedor .descripcion .parrafos p {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* line 134, ../sass/estilo.scss */
+  .imagenes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+  }
+  /* line 137, ../sass/estilo.scss */
+  .imagenes .pic {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+  }
+
+  /* line 143, ../sass/estilo.scss */
+  .fotos {
+    width: 100%;
+    height: 100%;
+  }
 }
