@@ -1,160 +1,49 @@
-/* line 1, ../sass/estilo.scss */
+/* RESPONSIVE PARA CELULARES */
+/* line 144, ../sass/estilo.scss */
 html, body {
   margin: 0;
   padding: 0;
-  background: url(../img/pattern.jpg);
-  background-size: contain;
 }
 
-/* line 37, ../sass/estilo.scss */
+/* line 149, ../sass/estilo.scss */
 .contenedor {
+  height: 100vh;
+  background: maroon;
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-box-shadow: 13px 12px 11px 1px dimgray;
-  -moz-box-shadow: 13px 12px 11px 1px dimgray;
-  box-shadow: 13px 12px 11px 1px dimgray;
-  border: 5px ridge black;
-  margin: auto;
+}
+
+/* line 157, ../sass/estilo.scss */
+.card {
+  width: 50%;
+  height: 400px;
+  background: #000;
+  display: flex;
+}
+
+/* line 164, ../sass/estilo.scss */
+.avatar {
+  width: 30%;
+  height: 400px;
+  background: palegoldenrod;
+}
+
+/* line 170, ../sass/estilo.scss */
+.descripcion {
   width: 70%;
   height: 400px;
-  margin-top: 100px;
-  background: #efc683;
+  background: rosybrown;
 }
 
-/* line 48, ../sass/estilo.scss */
-.avatar {
-  -webkit-border-radius: 230px;
-  -moz-border-radius: 230px;
-  border-radius: 230px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 230px;
-  height: 230px;
-}
-/* line 54, ../sass/estilo.scss */
-.avatar img {
-  width: 100%;
-  height: 230px;
-  -webkit-border-radius: 230px;
-  -moz-border-radius: 230px;
-  border-radius: 230px;
-}
-
-/* line 61, ../sass/estilo.scss */
-.descripcion {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 60%;
-  margin-left: 70px;
-  font-family: 'Monda', sans-serif;
-}
-/* line 67, ../sass/estilo.scss */
-.descripcion .parrafos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-/* line 71, ../sass/estilo.scss */
-.descripcion p {
-  margin: 0px 15px 0px 15px;
-  text-align: center;
-  font-size: 13px;
-}
-
-/* line 78, ../sass/estilo.scss */
-.imagenes {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  width: 60%;
-  margin-top: 30px;
-}
-/* line 83, ../sass/estilo.scss */
-.imagenes .fotos {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-/* line 87, ../sass/estilo.scss */
-.imagenes .centro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-/* line 91, ../sass/estilo.scss */
-.imagenes .pic {
-  border: 2px ridge black;
+/* line 176, ../sass/estilo.scss */
+.parrafos {
+  height: 70%;
   background: white;
-  width: 95px;
-  height: 95px;
-  margin: 10px;
 }
 
-/* RESPONSIVE PARA CELULARES */
-@media only screen and (min-width: 320px) and (max-width: 600px) {
-  /* line 104, ../sass/estilo.scss */
-  .contenedor {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-  }
-  /* line 108, ../sass/estilo.scss */
-  .contenedor .avatar {
-    margin-bottom: 30px;
-  }
-  /* line 111, ../sass/estilo.scss */
-  .contenedor .avatar img {
-    width: 80%;
-    height: 100%;
-  }
-  /* line 117, ../sass/estilo.scss */
-  .contenedor .descripcion {
-    width: 100%;
-    margin: 0;
-  }
-  /* line 121, ../sass/estilo.scss */
-  .contenedor .descripcion .parrafos {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 12px;
-  }
-  /* line 125, ../sass/estilo.scss */
-  .contenedor .descripcion .parrafos p {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* line 134, ../sass/estilo.scss */
-  .imagenes {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: space-between;
-  }
-  /* line 137, ../sass/estilo.scss */
-  .imagenes .pic {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 5px;
-  }
-
-  /* line 143, ../sass/estilo.scss */
-  .fotos {
-    width: 100%;
-    height: 100%;
-  }
+/* line 181, ../sass/estilo.scss */
+.imagenes {
+  height: 30%;
+  background: palevioletred;
 }

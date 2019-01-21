@@ -1,148 +1,184 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    background: url(../img/pattern.jpg);
-    background-size: contain;
-}
 
 // ACÁ VAN LOS MIXINS ------------------------------------
 
-@mixin border-radius {
-    -webkit-border-radius: 230px;
-    -moz-border-radius: 230px;
-    border-radius: 230px;
+// @mixin border-radius {
+//     -webkit-border-radius: 230px;
+//     -moz-border-radius: 230px;
+//     border-radius: 230px;
+// }
+
+// @mixin centrar {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+// @mixin flex ($direction, $justify, $align) {
+//     display: flex;
+//     flex-direction: $direction;
+//     justify-content: $justify;
+//     align-items: $align;
+// }
+
+// @mixin sombra {
+//     -webkit-box-shadow: 13px 12px 11px 1px rgba(105,105,105,1);
+//     -moz-box-shadow: 13px 12px 11px 1px rgba(105,105,105,1);
+//     box-shadow: 13px 12px 11px 1px rgba(105,105,105,1);
+// }
+
+// ACÁ EMPIEZA LA PÁGINA -------------------------------------
+
+// .contenedor {
+//     @include centrar();
+//     @include sombra();
+//     border: 5px ridge black;
+//     margin: auto;
+//     width: 70%;
+//     height: 400px;
+//     margin-top: 100px;
+//     background: #efc683;
+// }
+
+// .avatar {
+//     @include border-radius();
+//     @include centrar();
+//     width: 230px;
+//     height: 230px;
+    
+//     img {
+//         width: 100%;
+//         height: 230px;
+//         @include border-radius();
+//     }
+// }
+
+// .descripcion {
+//     @include flex(column, center, center);
+//     width: 60%;
+//     margin-left: 70px;
+//     font-family: 'Monda', sans-serif;
+
+//     .parrafos {
+//         @include centrar();
+//     }
+
+//     p {
+//         margin: 0px 15px 0px 15px;
+//         text-align: center;
+//         font-size: 13px;
+//     }
+// }
+
+// .imagenes {
+//     @include flex(row, space-around, center);
+//     width: 60%;
+//     margin-top: 30px;
+    
+//     .fotos {
+//         @include flex(row, center, center);
+//     }
+
+//     .centro {
+//         @include centrar();
+//     }
+
+//     .pic {
+//         border: 2px ridge black;
+//         background: white;
+//         width: 95px;
+//         height: 95px;  
+//         margin: 10px;
+//     }
+// }
+
+/* RESPONSIVE PARA CELULARES */
+
+// @media only screen and (min-width: 320px) and (max-width: 600px) {
+    
+//     .contenedor { 
+//         @include flex (column, center, center);
+//         width: 90%;
+
+//         .avatar {
+//             margin-bottom: 30px;
+
+//             img {
+//                 width: 80%;
+//                 height: 100%;
+//             }
+//         }
+        
+//     .descripcion {
+//             width: 100%;
+//             margin: 0;
+
+//             .parrafos {
+//                 @include flex (row, center, center);
+//                 font-size: 12px;
+
+//                 p {
+//                     @include flex(row, center, center);
+//                 }
+//             }
+
+//         }
+//     }
+
+    
+//     .imagenes {
+//         @include flex (column, center, space-between);
+
+//         .pic {
+//             @include flex (row, center, center);
+//             margin: 5px;
+//         }
+//     }
+
+//     .fotos {
+
+//         width: 100%;
+//         height: 100%;
+//     }
+// }
+
+html, body {
+    margin: 0;
+    padding: 0;
 }
 
-@mixin centrar {
+.contenedor {
+    height: 100vh;
+    background: maroon;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-@mixin flex ($direction, $justify, $align) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
-}
-
-@mixin sombra {
-    -webkit-box-shadow: 13px 12px 11px 1px rgba(105,105,105,1);
-    -moz-box-shadow: 13px 12px 11px 1px rgba(105,105,105,1);
-    box-shadow: 13px 12px 11px 1px rgba(105,105,105,1);
-}
-
-// ACÁ EMPIEZA LA PÁGINA -------------------------------------
-
-.contenedor {
-    @include centrar();
-    @include sombra();
-    border: 5px ridge black;
-    margin: auto;
-    width: 70%;
+.card {
+    width: 50%;
     height: 400px;
-    margin-top: 100px;
-    background: #efc683;
+    background: #000;
+    display: flex;
 }
 
 .avatar {
-    @include border-radius();
-    @include centrar();
-    width: 230px;
-    height: 230px;
-    
-    img {
-        width: 100%;
-        height: 230px;
-        @include border-radius();
-    }
+    width: 30%;
+    height: 400px;
+    background: palegoldenrod;
 }
 
 .descripcion {
-    @include flex(column, center, center);
-    width: 60%;
-    margin-left: 70px;
-    font-family: 'Monda', sans-serif;
+    width: 70%;
+    height: 400px;
+    background: rosybrown;
+}
 
-    .parrafos {
-        @include centrar();
-    }
-
-    p {
-        margin: 0px 15px 0px 15px;
-        text-align: center;
-        font-size: 13px;
-    }
+.parrafos {
+    height: 70%;
+    background: white;
 }
 
 .imagenes {
-    @include flex(row, space-around, center);
-    width: 60%;
-    margin-top: 30px;
-    
-    .fotos {
-        @include flex(row, center, center);
-    }
-
-    .centro {
-        @include centrar();
-    }
-
-    .pic {
-        border: 2px ridge black;
-        background: white;
-        width: 95px;
-        height: 95px;  
-        margin: 10px;
-    }
-}
-
-/* RESPONSIVE PARA CELULARES */
-
-@media only screen and (min-width: 320px) and (max-width: 600px) {
-    
-    .contenedor { 
-        @include flex (column, center, center);
-        width: 90%;
-
-        .avatar {
-            margin-bottom: 30px;
-
-            img {
-                width: 80%;
-                height: 100%;
-            }
-        }
-        
-    .descripcion {
-            width: 100%;
-            margin: 0;
-
-            .parrafos {
-                @include flex (row, center, center);
-                font-size: 12px;
-
-                p {
-                    @include flex(row, center, center);
-                }
-            }
-
-        }
-    }
-
-    
-    .imagenes {
-        @include flex (column, center, space-between);
-
-        .pic {
-            @include flex (row, center, center);
-            margin: 5px;
-        }
-    }
-
-    .fotos {
-
-        width: 100%;
-        height: 100%;
-    }
+    height: 30%;
+    background: palevioletred;
 }
