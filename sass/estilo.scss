@@ -56,7 +56,7 @@
 //     @include flex(column, center, center);
 //     width: 60%;
 //     margin-left: 70px;
-//     font-family: 'Monda', sans-serif;
+//     
 
 //     .parrafos {
 //         @include centrar();
@@ -146,39 +146,83 @@ html, body {
     padding: 0;
 }
 
+p {
+    margin: 0;
+}
+
 .contenedor {
     height: 100vh;
-    background: maroon;
+    background: url(../img/pattern.jpg);
+    background-size: contain;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .card {
+    display: flex;
     width: 50%;
     height: 400px;
-    background: #000;
-    display: flex;
+    background: #ffd6b6;
+    -webkit-box-shadow: 13px 12px 11px 1px rgba(105,105,105,1);
+    -moz-box-shadow: 13px 12px 11px 1px rgba(105,105,105,1);
+    box-shadow: 13px 12px 11px 1px rgba(105,105,105,1);
 }
 
 .avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 30%;
-    height: 400px;
-    background: palegoldenrod;
+    height: auto;
+}
+
+.profPic {
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+    overflow: hidden;
+    // background: paleturquoise; 
+}
+
+.profPic img {
+    width: 100%;
+    height: 100%;
 }
 
 .descripcion {
+    display: flex;
+    flex-direction: column;
     width: 70%;
-    height: 400px;
-    background: rosybrown;
+    height: auto;
+    background: #ffd6b6;
 }
 
 .parrafos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 70%;
-    background: white;
 }
 
-.imagenes {
+.parrafos p {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Monda', sans-serif;
+    font-size: 14px;
+}
+
+.fotitos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 5px 0 5px;
     height: 30%;
-    background: palevioletred;
+}
+
+.fotitos .pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: black;
 }
